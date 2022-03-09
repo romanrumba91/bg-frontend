@@ -1,5 +1,4 @@
 import { useReducer } from 'react'
-
 import UsersReducer from './UsersReducer'
 import UsersContext from './UsersContext'
 
@@ -69,7 +68,6 @@ const UsersState = (props) => {
 			type: "LOGIN_EXITOSO",
 			payload: token
 		})
-
 
 	}
 

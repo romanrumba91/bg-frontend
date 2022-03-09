@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 .App {
-  text-align: center;
+  text-align: right;
 }
 
 .App-logo {
@@ -36,3 +37,20 @@
     transform: rotate(360deg);
   }
 }
+.prueba {
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  font-weight: bold;
+  margin: 30px;
+
+
+}
+.logoInventado{
+  width: 10px;
+  height: 10px;
+  margin-right: 500px;
+  
+}
+
+
+

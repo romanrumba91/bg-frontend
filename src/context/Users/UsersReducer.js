@@ -9,6 +9,7 @@ const reducer = (globalState, action) => {
 			return {
 				...globalState,
 				authStatus: true
+
 			}
 
 		case "VERIFICAR_TOKEN":
@@ -31,6 +32,7 @@ const reducer = (globalState, action) => {
                     password: "",
                     confirmpassword:""
 				}
+				
 			}
 
 		default:

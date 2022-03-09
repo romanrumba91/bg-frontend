@@ -6,11 +6,23 @@ import Layout from './components/Layout/Layout';
 import Auth from './routes/Auth'
 import Public from './routes/Public';
 import Home from './components/Home/Home';
+import About from './components/About/About';
+import Location from './components/Location/Location';
+import MainMenu from './components/Mainmenu/MainMenu';
+import BagPack from './components/BagPack/BagPack';
+
+
+
+
+
+
+
 
 
 function Router() {
   return (
     <>
+
         <UsersState>
 
           <BrowserRouter>
@@ -38,8 +50,34 @@ function Router() {
                       element={
                         <Auth component={Login} />
                       } 
-                    />                
-                    
+                    />  
+                    {/* localhost:3000/login */}
+                    <Route 
+                      path="about"
+                      element={
+                        <Auth component={About} />
+                      } 
+                    />   
+                    <Route 
+                      path="location"
+                      element={
+                        <Auth component={Location} />
+                      } 
+                    />   
+                    <Route 
+                      path="mainmenu"
+                      element={
+                        <Auth component={MainMenu} />
+                      } 
+                    />    
+                    <Route 
+                      path="bagpack"
+                      element={
+                        <Auth component={BagPack} />
+                      }
+                       
+                    />         
+  
 
 
 
@@ -51,6 +89,7 @@ function Router() {
           </BrowserRouter>
 
           </UsersState>
+
 
     </>
   );

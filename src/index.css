@@ -15,3 +15,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.prueba {
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  font-weight: bold;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-top: 100px;
+
+
+
+}
+.logoInventado{
+  width: 50px;
+  height: 50px;
+  margin-right: 1450px;
+  
+}
+.location{
+  align-items: center;
+  display: block;
+  margin-left: 750px;
+  margin-right: auto;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.imageMain{
+  width: 1950px;
+  height: 460px;
+}
+.imageMain2{
+  margin-top: 25px;
+  width: 200px;
+  height:200px
+}
