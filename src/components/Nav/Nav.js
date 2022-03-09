@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link} from 'react-router-dom'
 export default function Nav() {
   return (
 
@@ -17,39 +17,100 @@ export default function Nav() {
                 {/* </div> */}
                         <div className="inline-flex h-30 mt-32 ml-28 mb-24">
 
-
-                                    <li>
+                              
+                                    {/* <li>
                                     <a href="/" className='prueba' >
                                     Home
                                     </a>
-                                    </li>
+                                    </li> */}
 
+                                    <li>
+                                    <div className='prueba'>
+                                    <Link
+                                      to="/"
+                                    >
+                                      Home		
+                                    </Link>
+                                    </div>
+                                    </li>
+{/* 
                                     <li>
                                     <a href="/about" className='prueba' >
                                     About
                                     </a>
-                                    </li>
+                                    </li> */}
 
                                     <li>
+                                    <div className='prueba'>
+                                    <Link
+                                      to="/about"
+                                    >
+                                      About		
+                                    </Link>
+                                    </div>
+                                    </li>
+
+                                    {/* <li>
                                     <a href="/bagpacks" className='prueba' >
                                     Bagpacks
                                     </a>
-                                    </li>
+                                    </li> */}
+
                                     <li>
+                                    <div className='prueba'>
+                                    <Link
+                                      to="/bagpacks"
+                                    >
+                                      Bagpacks		
+                                    </Link>
+                                    </div>
+                                    </li>
+
+                                    {/* <li>
                                     <a href="/wallets" className='prueba' >
                                     Wallets
                                     </a>
-                                    </li>
+                                    </li> */}
+
                                     <li>
+                                    <div className='prueba'>
+                                    <Link
+                                      to="/wallets"
+                                    >
+                                      Wallets		
+                                    </Link>
+                                    </div>
+                                    </li>
+                                    {/* <li>
                                     <a href="/accesories" className='prueba' >
                                     Accesories
                                     </a>
-                                    </li>
+                                    </li> */}
+
                                     <li>
+                                    <div className='prueba'>
+                                    <Link
+                                      to="/accesories"
+                                    >
+                                      Accesories		
+                                    </Link>
+                                    </div>
+                                    </li>
+                                    {/* <li>
                                     <a href="/location" className='prueba' >
                                     Location
                                     </a>
+                                    </li> */}
+                                    <li>
+                                    <div className='prueba'>
+                                    <Link
+                                      to="/location"
+                                    >
+                                      Location		
+                                    </Link>
+                                    </div>
                                     </li>
+                              
 
 			            </div>
 			 </div>

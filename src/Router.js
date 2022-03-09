@@ -10,6 +10,7 @@ import About from './components/About/About';
 import Location from './components/Location/Location';
 import MainMenu from './components/Mainmenu/MainMenu';
 import BagPack from './components/BagPack/BagPack';
+import AuthMenu from './routes/AuthMenu';
 
 
 
@@ -55,25 +56,25 @@ function Router() {
                     <Route 
                       path="about"
                       element={
-                        <Auth component={About} />
+                        <AuthMenu component={About} />
                       } 
                     />   
                     <Route 
                       path="location"
                       element={
-                        <Auth component={Location} />
+                        <AuthMenu component={Location} />
                       } 
                     />   
                     <Route 
                       path="mainmenu"
                       element={
-                        <Auth component={MainMenu} />
+                        <AuthMenu component={MainMenu} />
                       } 
                     />    
                     <Route 
                       path="bagpack"
                       element={
-                        <Auth component={BagPack} />
+                        <AuthMenu component={BagPack} />
                       }
                        
                     />         

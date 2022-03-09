@@ -55,7 +55,7 @@ const UsersState = (props) => {
 			type: "VERIFICAR_TOKEN",
 			payload: userData
 		})
-
+			console.log(globalState.authStatus)
 	}
 	
 	const loginUser = async (form) => {

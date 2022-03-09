@@ -1,33 +1,38 @@
 import { useContext, useState, useEffect } from 'react'
 
-import { Navigate } from 'react-router-dom'
+import { Navigate, useParams } from 'react-router-dom'
 import UsersContext from './../context/Users/UsersContext'
 
 
-export default function Auth({ component: Component }) {
+export default function AuthMenu({ component: Component }) {
 
 	const userCtx = useContext(UsersContext)
 
 	const { 
 		authStatus, 
-		verifyingToken } = userCtx
+		verifyingToken,
+        currentUser } = userCtx
+
+        const {id} = useParams()
+        console.log(id)
 
 
 	useEffect(() => {
 		verifyingToken()
 	}, [authStatus])
 
-
+    console.log(authStatus)
   return (
 	<div>
 
 		{
 			authStatus ?
 			// SI EL USUARIO YA ESTÁ LOGGEADO, ENTONCES, ENVÍAME AL HOME
-			(<Navigate replace to ="/mainmenu" />)
+            (<Component params={id} user={currentUser._id} />)
+			
 			:
 			// SI EL USUARIO NO ESTÁ LOGGEADO, ENTONCES, DÉJAME ACCEDER AL COMPONENTE PROP QUE TRAE LA RUTA
-			(<Component />)
+			(<Navigate replace to ="/" />)
 		}
 
 		
