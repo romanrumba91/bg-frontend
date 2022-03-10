@@ -8,6 +8,11 @@ const reducer = (globalState, action) => {
 				...globalState,
 				bagpacks: action.payload
 			}
+		case "EDIT_PLACE":
+            return{
+                ...globalState,
+                formData: action.payload
+            }
 
 		default:
 			return globalState

@@ -2,6 +2,7 @@ import { useReducer } from 'react'
 import axiosClient from '../../config/axios';
 import BagPackContext from './BagPackContext';
 import BagPackReducer from './BagPackReducer';
+import { Navigate } from "react-router-dom";
 
 const BagPackState = (props) => {
 
@@ -34,6 +35,19 @@ const BagPackState = (props) => {
 
 	}
 
+  const editBagPack = async (formData) => {
+
+    
+		const res = await axiosClient.post(`/api/bagpack/${formData._id}/edit`, formData)
+    dispatch({
+      type: "EDIT_PLACE",
+      payload: formData
+  })
+
+    // return (<Navigate replace to="/bagpack" />);
+
+	}
+
 
 
   return (
@@ -41,7 +55,8 @@ const BagPackState = (props) => {
 			value={{
 				bagpacks: globalState.bagpacks,
 				getBagPack,
-				createBagPack
+				createBagPack,
+        editBagPack
 			}}
 		>
 			{props.children}
