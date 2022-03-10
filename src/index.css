@@ -50,3 +50,8 @@ code {
   width: 200px;
   height:200px
 }
+.alineacion{
+  align-content: center;
+  align-items: center;
+  text-align: center;
+}

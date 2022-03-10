@@ -28,7 +28,7 @@ export default function AuthMenu({ component: Component }) {
 		{
 			authStatus ?
 			// SI EL USUARIO YA ESTÁ LOGGEADO, ENTONCES, ENVÍAME AL HOME
-            (<Component params={id} user={currentUser._id} />)
+            (<Component/>)
 			
 			:
 			// SI EL USUARIO NO ESTÁ LOGGEADO, ENTONCES, DÉJAME ACCEDER AL COMPONENTE PROP QUE TRAE LA RUTA

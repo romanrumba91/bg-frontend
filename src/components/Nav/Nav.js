@@ -59,43 +59,13 @@ export default function Nav() {
                                     <li>
                                     <div className='prueba'>
                                     <Link
-                                      to="/bagpacks"
+                                      to="/bagpack"
                                     >
                                       Bagpacks		
                                     </Link>
                                     </div>
                                     </li>
 
-                                    {/* <li>
-                                    <a href="/wallets" className='prueba' >
-                                    Wallets
-                                    </a>
-                                    </li> */}
-
-                                    <li>
-                                    <div className='prueba'>
-                                    <Link
-                                      to="/wallets"
-                                    >
-                                      Wallets		
-                                    </Link>
-                                    </div>
-                                    </li>
-                                    {/* <li>
-                                    <a href="/accesories" className='prueba' >
-                                    Accesories
-                                    </a>
-                                    </li> */}
-
-                                    <li>
-                                    <div className='prueba'>
-                                    <Link
-                                      to="/accesories"
-                                    >
-                                      Accesories		
-                                    </Link>
-                                    </div>
-                                    </li>
                                     {/* <li>
                                     <a href="/location" className='prueba' >
                                     Location

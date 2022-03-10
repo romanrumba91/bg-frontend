@@ -24,7 +24,7 @@ export default function Auth({ component: Component }) {
 		{
 			authStatus ?
 			// SI EL USUARIO YA ESTÁ LOGGEADO, ENTONCES, ENVÍAME AL HOME
-			(<Navigate replace to ="/mainmenu" />)
+			(<Navigate replace to ="/" />)
 			:
 			// SI EL USUARIO NO ESTÁ LOGGEADO, ENTONCES, DÉJAME ACCEDER AL COMPONENTE PROP QUE TRAE LA RUTA
 			(<Component />)

@@ -8,22 +8,16 @@ import Public from './routes/Public';
 import Home from './components/Home/Home';
 import About from './components/About/About';
 import Location from './components/Location/Location';
-import MainMenu from './components/Mainmenu/MainMenu';
 import BagPack from './components/BagPack/BagPack';
-import AuthMenu from './routes/AuthMenu';
-
-
-
-
-
-
+import BagPackState from './context/BagPack/BagPackState';
+import ErrorPage from './components/ErrorPage/ErrorPage';
 
 
 
 function Router() {
   return (
     <>
-
+      <BagPackState>
         <UsersState>
 
           <BrowserRouter>
@@ -56,28 +50,24 @@ function Router() {
                     <Route 
                       path="about"
                       element={
-                        <AuthMenu component={About} />
+                        <Public component={About} />
                       } 
                     />   
                     <Route 
                       path="location"
                       element={
-                        <AuthMenu component={Location} />
-                      } 
-                    />   
-                    <Route 
-                      path="mainmenu"
-                      element={
-                        <AuthMenu component={MainMenu} />
+                        <Public component={Location} />
                       } 
                     />    
                     <Route 
                       path="bagpack"
                       element={
-                        <AuthMenu component={BagPack} />
+                        <Public component={BagPack} />
                       }
                        
-                    />         
+                    /> 
+
+                    <Route path="*" element={<ErrorPage/>}></Route>        
   
 
 
@@ -90,6 +80,7 @@ function Router() {
           </BrowserRouter>
 
           </UsersState>
+        </BagPackState>
 
 
     </>
