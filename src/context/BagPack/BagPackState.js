@@ -47,6 +47,12 @@ const BagPackState = (props) => {
     // return (<Navigate replace to="/bagpack" />);
 
 	}
+  const deleteBagPack = async (id) => {
+
+    const res = await axiosClient.post(`/api/bagpack/${id}/delete`)
+
+    getBagPack()
+}
 
 
 
@@ -56,7 +62,8 @@ const BagPackState = (props) => {
 				bagpacks: globalState.bagpacks,
 				getBagPack,
 				createBagPack,
-        editBagPack
+        editBagPack,
+        deleteBagPack
 			}}
 		>
 			{props.children}

@@ -2,7 +2,8 @@ import { useState, useContext, useEffect } from 'react'
 import BagPackContext from './../../context/BagPack/BagPackContext'
 import { Card, Col, Button } from 'antd';
 import { Divider,Row } from 'antd';
-import { Link} from "react-router-dom";
+import {  Link, useNavigate } from 'react-router-dom'
+
 export default function BagPack() {
 
   const ctxBag = useContext(BagPackContext)
@@ -130,11 +131,12 @@ export default function BagPack() {
 
 			</div>
 			<Link
-                              to={`/bagpack/${elt._id}/edit`}
+                              to={`/bagpack/${elt._id}`}
                               className="inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                              >Edit</Link>
+                              >Details</Link>
 			{/* <button type="button" className="inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Editar</button> */}
-			<button type="submit" className="inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Borrar</button>
+			{/* <button type="submit" className="inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Borrar</button> */}
+			{/* <Link  to={`/bagpack/${elt._id}`} type="button" className="absolute inset-0 focus:outline-none"></Link> */}
 			</div>
 
 		

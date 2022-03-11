@@ -12,10 +12,11 @@ export default function BagPackEdit() {
 
     const {
 		bagpacks,
-		editBagPack
+		editBagPack,
+        deleteBagPack
 	} = ctxBag
 
-    const {id} = useParams;
+    const {id} = useParams();
 
     const foundPlace = bagpacks.find((oneBagpack) => {
 
@@ -24,6 +25,9 @@ export default function BagPackEdit() {
     }) || {}
 
     const [newBag, setNewBag] = useState(foundPlace)
+
+    // console.log(foundPlace)
+    // console.log(id)
 
 
   const handleChange = (event) => {
@@ -48,7 +52,7 @@ export default function BagPackEdit() {
   return (
       <>
 
-<form onSubmit={(evt) => { handleSubmit(evt) }}>
+        <form onSubmit={(evt) => { handleSubmit(evt) }}>
 			<label>Name</label>
 			<input
                 
@@ -89,13 +93,21 @@ export default function BagPackEdit() {
 				className="py-3 px-4 block w-96 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
 			/>
 
-			<button  onClick={()=> { editBagPack(newBag) ; navigate("/bagpacks")}}type="submit"
+			<button  onClick={()=> { editBagPack(newBag) ; navigate("/bagpack")}}type="submit"
 			className="w-96 inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
 
-			>Create BagPack</button>
+
+			>Edit BagPack</button>
+
+            <button  onClick={()=> { deleteBagPack(foundPlace._id) ; navigate("/bagpack")}}type="submit"
+			className="w-96 inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+
+
+			>Delete BagPack</button>
+
+            
 
 		</form>
-
 
 
       </>

@@ -12,6 +12,8 @@ import BagPack from './components/BagPack/BagPack';
 import BagPackState from './context/BagPack/BagPackState';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import BagPackEdit from './components/BagPack/BagPackEdit';
+import BagDetails from './components/BagPack/BagDetails';
+
 
 
 
@@ -71,6 +73,10 @@ function Router() {
                     <Route
                     path="bagpack/:id/edit"
                     element={<Public component={BagPackEdit} />}
+                  />
+                    <Route
+                    path="bagpack/:id"
+                    element={<Public component={BagDetails} />}
                   />
 
                     <Route path="*" element={<ErrorPage/>}></Route>        
